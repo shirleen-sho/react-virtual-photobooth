@@ -14,6 +14,7 @@ function PhotoboothContent() {
     layout,
     photos,
     setPhotos,
+    setFrame,
   } = usePhotobooth();
 
   const currentTitle = currentStep?.title;
@@ -25,6 +26,7 @@ function PhotoboothContent() {
         // re-init photos src to null only when user change the layout (setPhotos[])
         const selectedLayout = getLayout(layout);
         setPhotos(initializePhotos(selectedLayout));
+        setFrame(null);
       }
     },
   };
