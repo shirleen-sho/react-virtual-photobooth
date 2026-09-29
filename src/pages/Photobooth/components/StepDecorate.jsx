@@ -197,11 +197,11 @@ function StepDecorate() {
   );
 
   return (
-    <div className="w-full grid grid-cols-4 gap-20">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-15 lg:gap-20">
       {/* Choose Background & Insert Text*/}
-      <div className="col-span-1 flex flex-col gap-8">
+      <div className="lg:col-span-1 flex flex-col gap-8 items-center lg:items-baseline">
         {/* BACKGROUND */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center lg:items-baseline">
           <span>Background :</span>
           <div className="flex flex-wrap gap-2">
             {photoboothBackgroundColors.map((color) => (
@@ -225,7 +225,7 @@ function StepDecorate() {
           </div>
         </div>
         {/* TIMESTAMP */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-row lg:flex-col gap-4 justify-center lg:justify-baseline items-center lg:items-baseline">
           <span>Display time stamp :</span>
           <Toggle
             enabled={showTimeStamp}
@@ -234,13 +234,15 @@ function StepDecorate() {
           />
         </div>
         {/* CUSTOM TEXT */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-row lg:flex-col gap-4 justify-center lg:justify-baseline items-center lg:items-baseline">
           <span>Display custom text :</span>
           <Toggle
             enabled={showCustomText}
             setEnabled={setShowCustomText}
             key="toggleDisplayCustomText"
           />
+        </div>
+        <div className="w-50">
           {/* text max. 25 characters */}
           <InputText
             value={customText}
@@ -252,7 +254,7 @@ function StepDecorate() {
         </div>
       </div>
       {/* Preview Canvas */}
-      <div className="col-span-2 flex justify-center">
+      <div className="lg:col-span-2 flex justify-center">
         <canvas
           ref={canvasRef}
           className={`${selectedLayout.cols === 1 ? "w-60" : "w-full max-w-120"} shadow-md`}
@@ -277,8 +279,8 @@ function StepDecorate() {
         )}
       </div>
       {/* Choose Sticker */}
-      <div className="col-span-1">
-        <div className="flex flex-col gap-4">
+      <div className="lg:col-span-1">
+        <div className="flex flex-col gap-4 items-center lg:items-baseline">
           <span>Sticker :</span>
           <div className="flex flex-wrap gap-2">
             {photoboothStickers.map((sticker) => (

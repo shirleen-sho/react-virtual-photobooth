@@ -2,7 +2,7 @@ import Button from "../../components/Button";
 
 function Home() {
   return (
-    <div className="py-32 flex flex-col md:items-center gap-12">
+    <div className="px-4 py-32 flex flex-col md:items-center gap-12">
       <div className="flex flex-col md:items-center gap-4">
         <span className="font-bold text-5xl tracking-wide text-primary-600">
           Virtual Photobooth

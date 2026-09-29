@@ -39,21 +39,23 @@ function PhotoboothContent() {
   return (
     <div className="flex flex-col items-center gap-6">
       {/* Photobooth Navigation Bar */}
-      <div className="w-full h-14 grid grid-cols-9 items-center text-center text-primary-700">
-        <div className="col-span-2 flex">
+      <div className="w-full h-14 grid grid-cols-5 sm:grid-cols-9 items-center text-center text-primary-700">
+        <div className="col-span-1 sm:col-span-2 flex">
           {!isFirstStep && (
             <Button onClick={goBack} variant="secondary">
-              &larr; Back
+              <span className="sm:hidden">&larr;</span>
+              <span className="hidden sm:inline">&larr; Back</span>
             </Button>
           )}
         </div>
-        <span className="col-span-5 font-semibold text-2xl">
+        <span className="col-span-3 sm:col-span-5 font-semibold text-lg sm:text-2xl px-2">
           {currentTitle}
         </span>
-        <div className="col-span-2 flex justify-end">
+        <div className="col-span-1 sm:col-span-2 flex justify-end">
           {!isLastStep && (
             <Button onClick={handleNext} variant="secondary">
-              Next &rarr;
+              <span className="sm:hidden">&rarr;</span>
+              <span className="hidden sm:inline">Next &rarr;</span>
             </Button>
           )}
         </div>

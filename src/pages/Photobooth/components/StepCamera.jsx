@@ -155,9 +155,9 @@ function StepCamera() {
           />
         </div>
       )}
-      <div className="w-full grid grid-cols-4 gap-20">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-15 lg:gap-20">
         {/* Choose Filter & Countdown */}
-        <div className="col-span-1 flex flex-col gap-8">
+        <div className="lg:col-span-1 flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <span>Filter :</span>
             <SelectButtons
@@ -176,7 +176,7 @@ function StepCamera() {
           </div>
         </div>
         {/* Webcam & Capture Button */}
-        <div className="col-span-2 w-full flex flex-col gap-8 items-center">
+        <div className="lg:col-span-2 w-full flex flex-col gap-8 items-center">
           <div className="relative w-full rounded-xl overflow-hidden shadow-md border-[3px] border-primary-500">
             <Webcam
               audio={false}
@@ -218,30 +218,32 @@ function StepCamera() {
           </Button>
         </div>
         {/* Preview Captured Photos */}
-        <div className="col-span-1 flex flex-col gap-8">
-          <div className="flex flex-col gap-4">
-            <span>Auto Capture :</span>
-            <Toggle
-              enabled={isAutoCapture}
-              setEnabled={() => setIsAutoCapture(!isAutoCapture)}
-              key="toggleIsAutoCapture"
-            />
-          </div>
-          <div className="flex flex-col gap-4">
-            <span>Mirror :</span>
-            <Toggle
-              enabled={mirrored}
-              setEnabled={() => setMirrored(!mirrored)}
-              key="toggleMirrored"
-            />
-          </div>
-          <div className="flex flex-col gap-4">
-            <span>Your Photos :</span>
-            <span className="w-fit px-4 py-2 rounded-xl text-sm font-semibold bg-primary-300">
-              {`${
-                filledPhotos.length > 0 ? filledPhotos.length : "0"
-              } / ${selectedLayout.totalPhotos}`}
-            </span>
+        <div className="lg:col-span-1 flex flex-col gap-12 lg:gap-8">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-row lg:flex-col gap-4 justify-center lg:justify-baseline items-center lg:items-baseline">
+              <span>Auto Capture :</span>
+              <Toggle
+                enabled={isAutoCapture}
+                setEnabled={() => setIsAutoCapture(!isAutoCapture)}
+                key="toggleIsAutoCapture"
+              />
+            </div>
+            <div className="flex flex-row lg:flex-col gap-4 justify-center lg:justify-baseline items-center lg:items-baseline">
+              <span>Mirror :</span>
+              <Toggle
+                enabled={mirrored}
+                setEnabled={() => setMirrored(!mirrored)}
+                key="toggleMirrored"
+              />
+            </div>
+            <div className="flex flex-row lg:flex-col gap-4 justify-center lg:justify-baseline items-center lg:items-baseline">
+              <span>Your Photos :</span>
+              <span className="w-fit px-4 py-2 rounded-xl text-sm font-semibold bg-primary-300">
+                {`${
+                  filledPhotos.length > 0 ? filledPhotos.length : "0"
+                } / ${selectedLayout.totalPhotos}`}
+              </span>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-4 w-full">
             {photos.map((photo, i) => (

@@ -11,7 +11,7 @@ function StepFrame() {
   };
 
   return (
-    <div className="flex gap-8">
+    <div className="flex flex-wrap gap-8 justify-center">
       <button
         className={`w-28 min-h-14 cursor-pointer rounded-xl shadow-lg border-[3px] transition duration-400 ease-in-out hover:scale-110 hover:-translate-y-0.5 ${
           frame === null ? "border-primary-500 scale-110" : "border-transparent"

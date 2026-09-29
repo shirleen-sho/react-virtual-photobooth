@@ -107,7 +107,7 @@ function StepDownload() {
   return isLoading ? (
     <div className="w-full text-center">Rendering your photostrip...</div>
   ) : (
-    <div className="w-full flex gap-20 justify-center items-center">
+    <div className="w-full flex flex-col sm:flex-row gap-10 sm:gap-15 lg:gap-20 justify-center items-center">
       <img
         src={imageResult}
         className={`${selectedLayout.cols === 1 ? "w-40" : "w-full max-w-80"} shadow-md`}
@@ -132,7 +132,7 @@ function StepDownload() {
           linkToPage="/"
           additionalStyle={{ width: "100%" }}
         >
-          Take New
+          Start Over
         </Button>
       </div>
     </div>

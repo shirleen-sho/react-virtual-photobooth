@@ -10,7 +10,7 @@ function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* navigation bar */}
-      <div className="flex flex-row gap-3 justify-end w-full pr-10 py-3 font-semibold text-primary-50 bg-primary-400">
+      <div className="flex flex-row gap-3 justify-center md:justify-end w-full md:pr-10 py-3 font-semibold text-primary-50 bg-primary-400">
         {navLinks.map((nl) => (
           <NavLink
             key={"navLink" + nl.path}
@@ -25,7 +25,7 @@ function Layout() {
         ))}
       </div>
       {/* page content */}
-      <div className="px-24 pt-6 pb-18 bg-primary-100 flex-1">
+      <div className="px-6 md:px-24 pt-6 pb-18 bg-primary-100 flex-1">
         <Outlet />
       </div>
     </div>

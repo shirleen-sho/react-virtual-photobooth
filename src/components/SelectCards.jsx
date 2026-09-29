@@ -1,6 +1,6 @@
 function SelectCards({ value, options, onChange }) {
   return (
-    <div className="flex flex-row gap-12 justify-center">
+    <div className="flex flex-wrap gap-8 justify-center">
       {options.map((opt) => (
         <button
           key={"layoutOption" + opt.key}
