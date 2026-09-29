@@ -11,7 +11,7 @@ function Button({
   disabled,
 }) {
   const baseStyle =
-    "w-fit h-fit cursor-pointer font-semibold text-base tracking-wide transition duration-400 ease-in-out enabled:hover:scale-105 enabled:hover:-translate-y-0.5 disabled:opacity-20 disabled:cursor-not-allowed";
+    "w-fit h-fit cursor-pointer font-semibold text-base tracking-wide text-center transition duration-400 ease-in-out enabled:hover:scale-105 enabled:hover:-translate-y-0.5 disabled:opacity-20 disabled:cursor-not-allowed";
   // note : pakai enabled agar style tersebut tidak mempengaruhi button ketika disabled
 
   const variantStyle = {
